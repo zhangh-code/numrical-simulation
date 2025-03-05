@@ -1,5 +1,5 @@
 # Circulation Simulation
-![3D plot](./MIT3D_temp_skip.gif) ![3D plot](./MIT3D_salt_skip.gif)
+![3D plot](./MIT3D_temp_skip.gif) 
 
 
 # Introduction
