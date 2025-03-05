@@ -1,0 +1,17 @@
+#PBS -N run_Pac_ctrl
+#PBS -l nodes=10:ppn=28
+#PBS -q batch
+#PBS -V
+
+
+### intel mpi 
+###source /opt/intel/impi/3.2.2.006/bin64/mpivars.sh
+source /public/software/profile.d/mpi_mvapich2-2.2b-intel.sh
+cd $PBS_O_WORKDIR
+EXEC=/public/home/zhanghua/MITgcm/verification/circulation_Pac/run_con/mitgcmuv
+
+NSLOTS=`cat $PBS_NODEFILE | wc -l`
+echo "This jobs is "$PBS_JOBID@$PBS_QUEUE"  "$NSLOTS" "$PBS_NODEFILE
+
+mpirun -np 280 -machinefile ${PBS_NODEFILE} $EXEC
+

@@ -1,0 +1,9 @@
+# Packages
+ &PACKAGES
+  useGMRedi = .TRUE.,
+  useKPP    = .TRUE.,
+  useEXF    = .TRUE.,
+  useOBCS   = .TRUE.,
+  useKL10   = .FALSE.,
+  useDiagnostics = .TRUE.,
+ &

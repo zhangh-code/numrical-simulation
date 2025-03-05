@@ -1,0 +1,89 @@
+# Open-boundaries
+ &OBCS_PARM01
+# This flag turns off checking and fixing problematic topography across 
+# open boundaries.
+ OBCSfixTopo=.TRUE.,
+ OB_Jnorth= 1400*-1,
+ OB_Jsouth= 1400*1,
+ OB_Ieast = 600*-1,
+ OB_Iwest = 600*1,
+ 
+ useOBCSprescribe = .TRUE.,
+
+ useOBCSbalance =.TRUE.,
+ OBCS_balanceFacE = 1.,
+ OBCS_balanceFacW = 1.,
+ OBCS_balanceFacN = 1.,
+ OBCS_balanceFacS = 1.,
+
+ useOBCSsponge =.TRUE.,
+
+# useOrlanskiNorth =.FALSE.,
+# useOrlanskiEast  =.FALSE.,
+# useOrlanskiWest  =.FALSE.,
+# useOrlanskiSouth =.TRUE.,
+
+ OBNuFile = '../make_files/North_u_soda361.bin12',
+ OBSuFile = '../make_files/South_u_soda361.bin12',
+ OBWuFile = '../make_files/West_u_soda361.bin12',
+ OBEuFile = '../make_files/East_u_soda361.bin12',
+
+ OBNvFile = '../make_files/North_v_soda361.bin12',
+ OBSvFile = '../make_files/South_v_soda361.bin12',
+ OBWvFile = '../make_files/West_v_soda361.bin12',
+ OBEvFile = '../make_files/East_v_soda361.bin12',
+
+ OBNtFile = '../make_files/North_temp_soda361.bin12',
+ OBStFile = '../make_files/South_temp_soda361.bin12',
+ OBWtFile = '../make_files/West_temp_soda361.bin12',
+ OBEtFile = '../make_files/East_temp_soda361.bin12',
+
+ OBNsFile = '../make_files/North_salt_soda361.bin12',
+ OBSsFile = '../make_files/South_salt_soda361.bin12',
+ OBWsFile = '../make_files/West_salt_soda361.bin12',
+ OBEsFile = '../make_files/East_salt_soda361.bin12',
+ 
+# OBNetaFile = 'North_ssh_HYCOM.bin12',
+# OBSetaFile = 'South_ssh_HYCOM.bin12',
+# OBWetaFile = 'West_ssh_HYCOM.bin12',
+# OBEetaFile = 'East_ssh_HYCOM.bin12',
+
+ OBCS_monitorFreq= 2592000.,
+ OBCS_monSelect = 1,
+ &
+ useOBCStides = .FALSE.,
+#components   = M2       S2     N2       K2       K1      O1       P1       Q1       Mf         Mm
+#periods (hr) = 12.4206  12     12.6583  11.9672  23.9345 25.8193  24.0659  26.8684  327.8599   661.31
+ tidalPeriod  = 44714.16,43200.,45569.88,43081.92,86164.2,92949.48,86637.24,96726.24,1180295.64,2380716.,
+# OBWamFile='WestAM_8Tu.bin1290',
+# OBWphFile='WestPH_8Tu.bin1290',
+# OBEamFile='EastAM_8Tu.bin1290',
+# OBEphFile='EastPH_8Tu.bin1290',
+# OBNamFile='NorthAM_8Tv.bin1290',
+# OBNphFile='NorthPH_8Tv.bin1290',
+# OBSamFile='SouthAM_8Tv.bin1290',
+# OBSphFile='SouthPH_8Tv.bin1290',
+ 
+# Orlanski parameters
+ &OBCS_PARM02
+#Cmax=0.45,
+#cVelTimeScale=2000.,
+#useFixedCEast=.FALSE.,
+#useFixedCWest=.FALSE.,
+ &
+
+# Sponge parameters
+ &OBCS_PARM03
+ Urelaxobcsinner = 86400.,
+ Urelaxobcsbound = 86400.,
+ Vrelaxobcsinner = 86400.,
+ Vrelaxobcsbound = 86400.,
+ spongeThickness = 6,
+ &
+
+# Stevens parameters
+ &OBCS_PARM04
+# TrelaxStevens = 86400.,
+# SrelaxStevens = 86400.,
+ &
+

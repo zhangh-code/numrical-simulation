@@ -1,0 +1,219 @@
+#
+# *********************
+# External Forcing Data
+# *********************
+ &EXF_NML_01
+#
+ useExfCheckRange  = .TRUE.,
+ repeatPeriod      = 31104000,
+ useEXFYearlyFields= .FALSE.,
+ exf_iprec         = 32,
+ exf_verbose       = .FALSE.,
+ useAtmWind        = .TRUE.,
+#
+ &
+
+# *********************
+ &EXF_NML_02
+#
+ uwindstartdate1  = 20000101,
+ uwindstartdate2  = 000000,
+ uwindperiod      = 2592000,
+ uwindfile        = '../make_files/uwnd_Pac_ERA5_clim.bin12',
+#
+ vwindstartdate1  = 20000101,
+ vwindstartdate2  = 000000,
+ vwindperiod      = 2592000,
+ vwindfile        = '../make_files/vwnd_Pac_ERA5_clim.bin12',
+#
+ lwfluxstartdate1  = 20000101,
+ lwfluxstartdate2  = 000000,
+ lwfluxperiod      = 2592000,
+ lwfluxfile        = '../make_files/nlwrs_Pac_ERA5_clim.bin12',
+#
+ swfluxstartdate1  = 20000101,
+ swfluxstartdate2  = 000000,
+ swfluxperiod      = 2592000,
+ swfluxfile        = '../make_files/nswrs_Pac_ERA5_clim.bin12',
+#
+ precipstartdate1   = 20000101,
+ precipstartdate2   = 000000,
+ precipperiod       = 2592000,
+ precipfile         = '../make_files/prt_Pac_ERA5_clim.bin12',
+#
+# sfluxstartdate1   = 20000101,
+# sfluxstartdate2   = 000000,
+# sfluxperiod       = 2592000,
+# sfluxfile         = 'EmP_era_cli.bin',
+#
+ atempstartdate1   = 20000101,
+ atempstartdate2   = 000000,
+ atempperiod       = 2592000,
+ atempfile         = '../make_files/atemp_Pac_ERA5_clim.bin12',
+#
+ aqhstartdate1     = 20000101,
+ aqhstartdate2     = 000000,
+ aqhperiod         = 2592000,
+ aqhfile           = '../make_files/shum_Pac_ERA5_clim.bin12',
+#
+ climsststartdate1  = 20000101,
+ climsststartdate2  = 000000,
+ climsstperiod      = 2592000,
+ climsstTauRelax    = 2592000,
+ climsstfile        = '../make_files/SST_soda361.bin12',
+#
+ climsssstartdate1  = 20000101,
+ climsssstartdate2  = 000000,
+ climsssperiod      = 2592000,
+ climsssTauRelax    = 2592000,
+ climsssfile        = '../make_files/SSS_soda361.bin12',
+#
+ &
+
+# *********************
+ &EXF_NML_03
+ &
+
+# *********************
+ &EXF_NML_04
+# uwind_lon0     = 85.125,
+# uwind_lon_inc  = 0.25,
+# uwind_lat0     = -25.875,
+# uwind_lat_inc  = 207*0.25,
+# uwind_nlon     = 328, 
+# uwind_nlat     = 208, 
+#
+# vwind_lon0     = 85.125,
+# vwind_lon_inc  = 0.25, 
+# vwind_lat0     = -25.875,
+# vwind_lat_inc  = 207*0.25, 
+# vwind_nlon     = 328, 
+# vwind_nlat     = 208, 
+#
+# lwflux_lon0     = 85.125,
+# lwflux_lon_inc  = 0.25, 
+# lwflux_lat0     = -25.875,
+# lwflux_lat_inc  = 207*0.25, 
+# lwflux_nlon     = 328, 
+# lwflux_nlat     = 208, 
+#
+# swflux_lon0     = 85.125,
+# swflux_lon_inc  = 0.25, 
+# swflux_lat0     = -25.875,
+# swflux_lat_inc  = 207*0.25,
+# swflux_nlon     = 328, 
+# swflux_nlat     = 208, 
+#
+# atemp_lon0     = 85.125,
+# atemp_lon_inc  = 0.25,
+# atemp_lat0     = -25.875,
+# atemp_lat_inc  = 207*0.25,
+# atemp_nlon     = 328, 
+# atemp_nlat     = 208, 
+#
+# aqh_lon0     = 85.125,
+# aqh_lon_inc  = 0.25,
+# aqh_lat0     = -25.875,
+# aqh_lat_inc  = 207*0.25,
+# aqh_nlon     = 328, 
+# aqh_nlat     = 208, 
+#
+# precip_lon0     = 85.125,
+# precip_lon_inc  = 0.25,
+# precip_lat0     = -25.875,
+# precip_lat_inc  = 207*0.25,
+# precip_nlon     = 328, 
+# precip_nlat     = 208, 
+#
+#
+# ustress_lon0      = 95.25D0,
+# ustress_lon_inc   = 0.5D0,
+# ustress_lat0      = -0.25D0,
+# ustress_lat_inc   = 75*0.5
+# ustress_nlon      = 96,
+# ustress_nlat      = 76,
+#
+# vstress_lon0      = 95.25D0,
+# vstress_lon_inc   = 0.5D0,
+# vstress_lat0      = -0.25D0,
+# vstress_lat_inc   = 75*0.5
+# vstress_nlon      = 96,
+# vstress_nlat      = 76,
+#
+# hflux_lon0        = 90.0,
+# hflux_lon_inc     = 1.875,
+# hflux_lat0        = -10.476,
+# hflux_lat_inc     = 1.9046898, 1.9047399, 1.9047303, 1.9047399,
+#                     1.9047320, 1.9047360, 1.9047320, 1.9047399,
+#		     1.9047303, 1.9047399, 1.9046898, 1.9048004,
+#		     1.9046993, 1.9047012, 1.9047985, 1.9047012,
+#		     1.9046993, 1.9048004, 1.9046993, 1.9047012,
+#		     1.9047985, 1.9047012, 1.9047012, 1.9046974,
+#		     1.9047012, 1.9048004, 1.9046974, 1.9047012,
+#		     1.9047012, 1.9046974, 1.9047012, 1.9047012,
+# hflux_nlon        = 33,
+# hflux_nlat        = 33,
+#
+# swflux_lon0       = 90.0,
+# swflux_lon_inc    = 1.875,
+# swflux_lat0       = -10.476,
+# swflux_lat_inc    = 1.9046898, 1.9047399, 1.9047303, 1.9047399,
+#                     1.9047320, 1.9047360, 1.9047320, 1.9047399,
+#		     1.9047303, 1.9047399, 1.9046898, 1.9048004,
+#		     1.9046993, 1.9047012, 1.9047985, 1.9047012,
+#		     1.9046993, 1.9048004, 1.9046993, 1.9047012,
+#		     1.9047985, 1.9047012, 1.9047012, 1.9046974,
+#		     1.9047012, 1.9048004, 1.9046974, 1.9047012,
+#		     1.9047012, 1.9046974, 1.9047012, 1.9047012,
+# swflux_nlon       = 33,
+# swflux_nlat       = 33,
+#
+# sflux_lon0        = 95.25D0,
+# sflux_lon_inc     = 0.5D0,
+# sflux_lat0        = -0.25D0,
+# sflux_lat_inc     = 75*0.5
+# sflux_nlon        = 96,
+# sflux_nlat        = 76,
+#
+# atemp_lon0     = 85.125
+#  atemp_lon_inc  = 0.25
+#   atemp_lat0     = -25.875
+#    atemp_lat_inc  = 207*0.25
+#     atemp_nlon     = 328 
+#      atemp_nlat     = 208 
+#
+# climsst_lon0        = 85.125,
+# climsst_lon_inc     = 0.25,
+# climsst_lat0        = -25.875,
+# climsst_lat_inc     = 207*0.25,
+# climsst_nlon        = 328,
+# climsst_nlat        = 208,
+#
+# climsss_lon0        = 85.125,
+# climsss_lon_inc     = 0.25,
+# climsss_lat0        = -25.875,
+# climsss_lat_inc     = 207*0.25,
+# climsss_nlon        = 328,
+# climsss_nlat        = 208,
+#
+ &
+
+# *****************************
+ &EXF_NML_OBCS
+#
+ obcsEstartdate1   = 20000101,
+ obcsEstartdate2   = 000000,
+ obcsEperiod       = 2592000.0,
+#
+ obcsWstartdate1   = 20000101,
+ obcsWstartdate2   = 000000,
+ obcsWperiod       = 2592000.0,
+#
+ obcsNstartdate1   = 20000101,
+ obcsNstartdate2   = 000000,
+ obcsNperiod       = 2592000.0,
+#
+ obcsSstartdate1   = 20000101,
+ obcsSstartdate2   = 000000,
+ obcsSperiod       = 2592000.0,
+ &
