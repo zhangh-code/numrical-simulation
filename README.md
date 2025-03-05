@@ -1,6 +1,6 @@
 # Circulation Simulation
-![3D plot](./MIT3D_temp_skip.gif)
-![3D plot](./MIT3D_salt_skip.gif)
+![3D plot](./MIT3D_temp_skip.gif MIT3D_salt_skip.gif)
+
 
 # Introduction
 This is a numerical simulation of the Pacific Ocean and its adjacent marginal seas based on MITgcm.
